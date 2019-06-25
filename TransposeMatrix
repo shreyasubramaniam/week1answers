@@ -1,0 +1,13 @@
+class Solution(object):
+    def transpose(self, A):
+        cols = len(A[0])
+        rows = len(A)
+        
+        output = [[0 for i in range(rows)] for j in range(cols)] 
+        
+        for i in range(rows):
+            for j in range(cols):
+                output[j][i] = A[i][j]
+
+        
+        return output
