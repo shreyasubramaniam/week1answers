@@ -1,0 +1,10 @@
+class Solution(object):
+    def sortArrayByParity(self, A):
+        sortedArray = []
+        for item in A:
+            if item % 2 == 0:
+                sortedArray.append(item)
+        for item in A:
+            if item % 2 != 0:
+                sortedArray.append(item)
+        return sortedArray
