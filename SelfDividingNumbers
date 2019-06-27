@@ -1,0 +1,18 @@
+class Solution(object):
+    def selfDividingNumbers(self, left, right):
+        inList = True
+        output = list()
+        numStr = ""
+        for value in range(left, right + 1):
+            numStr = str(value)
+            for i in range(len(numStr)):
+                if(int(numStr[i]) == 0):
+                    inList = False
+                    break
+                if(value % int(numStr[i]) != 0):
+                    inList = False;
+                    
+            if (inList == True):
+                output.append(value)
+            inList = True
+        return output
