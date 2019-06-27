@@ -1,0 +1,14 @@
+class Solution(object):
+    def plusOne(self, digits):
+        numString = [str(i) for i in digits]
+        newString = "".join(numString)
+        
+        newInt = int(newString)
+        newInt = newInt + 1
+        newString = str(newInt)
+        
+        numString = list(newString)
+        output = [int(i) for i in numString]
+        
+        return output
+        
