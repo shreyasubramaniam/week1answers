@@ -1,0 +1,8 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        record = {}
+        for i in nums:
+            record[i] += 1
+        for key, item in record:
+            if item > 1:
+                return key
