@@ -1,0 +1,14 @@
+class Solution(object):
+    def findComplement(self, num):
+        num = bin(num)[2:]
+        num = list(num)
+        returnList = list()
+        retNum = ''
+        for x in num:
+            if x == "1":
+                returnList.append("0")
+            else:
+                returnList.append("1")
+
+        retNum = ''.join(returnList)
+        return int(retNum,2)
