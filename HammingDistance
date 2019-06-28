@@ -1,0 +1,11 @@
+class Solution(object):
+    def hammingDistance(self, x, y):
+        xOr = x ^ y
+        counter = 0
+        
+        while(xOr):
+            if xOr & 1:
+                counter = counter + 1
+            xOr = xOr >> 1
+        
+        return counter
