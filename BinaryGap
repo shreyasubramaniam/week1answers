@@ -1,0 +1,16 @@
+class Solution(object):
+    def binaryGap(self, N):
+        dist = []
+        i = 0
+        while(N):
+            if(N & 1):
+                dist.append(i)
+            i = i + 1
+            N = N >> 1
+        
+        max = 0
+        for x in range(len(dist) - 1):
+            if ((dist[x+1] - dist[x]) > max):
+                max = dist[x+1] - dist[x]
+            
+        return max
